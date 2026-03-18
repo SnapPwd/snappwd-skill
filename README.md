@@ -41,7 +41,7 @@ The skill will guide you to create a secure link at **https://snappwd.io**:
 If you have `snappwd-cli` installed:
 
 ```bash
-npm install -g snappwd-cli
+npm install -g @snappwd/cli
 snappwd put "your-secret-here"
 ```
 

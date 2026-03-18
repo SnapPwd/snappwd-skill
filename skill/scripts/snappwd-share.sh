@@ -10,7 +10,7 @@ if ! command -v snappwd &> /dev/null; then
     echo "Error: snappwd-cli is not installed."
     echo ""
     echo "Install it with:"
-    echo "  npm install -g snappwd-cli"
+    echo "  npm install -g @snappwd/cli"
     echo ""
     echo "Or use the web interface at: https://snappwd.io"
     exit 1

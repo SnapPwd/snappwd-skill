@@ -3,7 +3,7 @@
 ## Installation
 
 ```bash
-npm install -g snappwd-cli
+npm install -g @snappwd/cli
 ```
 
 ## Commands

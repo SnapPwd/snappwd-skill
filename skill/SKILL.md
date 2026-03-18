@@ -33,7 +33,7 @@ If the user has `snappwd-cli` installed:
 
 ```bash
 # Install if needed
-npm install -g snappwd-cli
+npm install -g @snappwd/cli
 
 # Create a secure link
 snappwd put "your-secret-here"
