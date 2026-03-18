@@ -25,6 +25,18 @@ https://snappwd.io/g/abc123def456...#encryption-key...
 snappwd put-file ./path/to/file
 ```
 
+Examples:
+```bash
+# Share an .env file
+snappwd put-file ./.env
+
+# Share an SSH key
+snappwd put-file ~/.ssh/id_rsa
+
+# Share a config file
+snappwd put-file ./config/credentials.json
+```
+
 ### Retrieve a Secret
 
 ```bash
