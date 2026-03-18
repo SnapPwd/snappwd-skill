@@ -48,13 +48,16 @@ snappwd put "your-secret-here"
 ## Files
 
 ```
-snappwd-share/
-├── SKILL.md                    # Main skill instructions
-├── scripts/
-│   └── snappwd-share.sh        # CLI wrapper script
-└── references/
-    ├── cli-usage.md            # Detailed CLI documentation
-    └── security-model.md       # Security architecture explanation
+snappwd-skill/
+├── README.md                   # This file (repo documentation)
+├── LICENSE                     # MIT License
+└── skill/                      # ClawHub skill package
+    ├── SKILL.md                # Main skill instructions
+    ├── scripts/
+    │   └── snappwd-share.sh    # CLI wrapper script
+    └── references/
+        ├── cli-usage.md        # Detailed CLI documentation
+        └── security-model.md   # Security architecture explanation
 ```
 
 ## License
