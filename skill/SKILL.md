@@ -1,11 +1,13 @@
 ---
 name: snappwd-share
-description: Securely share secrets, API keys, files, and credentials with OpenClaw agents and team members via self-destructing links. Use when the user needs to share sensitive information (passwords, API keys, tokens, credentials, config files, .env files) in chat, email, or any messaging context. Triggers on phrases like "share this secret", "send this password securely", "create a secure link for this API key", "share credentials safely", "share this file securely", or when user mentions needing to share sensitive data.
+description: Securely share secrets, API keys, credentials, and sensitive files via SnapPwd self-destructing, end-to-end encrypted links. Use when a user asks to share a password, token, credential, .env file, private key, or other sensitive data securely in chat, email, or another messaging context.
 ---
 
 # SnapPwd Secure Secret Sharing
 
 Share secrets and files securely via self-destructing, end-to-end encrypted links.
+
+Use the web workflow when shell access or the SnapPwd CLI is unavailable. Use the CLI when it is available and the user has requested sharing. Resolve bundled scripts and reference paths relative to this skill's directory.
 
 ## When to Use This Skill
 
@@ -98,19 +100,16 @@ snappwd put-file ~/.ssh/id_rsa
 
 4. **Set appropriate expiration** — For sensitive secrets, consider setting a short TTL.
 
-## Integration with OpenClaw
+## Use with AI Assistants
 
-When users need to share credentials for OpenClaw configuration:
+When users need to share credentials for agent configuration, service access, or troubleshooting:
 
-1. User creates a SnapPwd link with the credential
-2. User shares the link in the OpenClaw chat
-3. OpenClaw (or the human on the other side) opens the link to retrieve the credential
-4. Link self-destructs, leaving no trace in chat history
+1. Help the user create a SnapPwd link using the web interface or available CLI.
+2. Return the complete link, including the fragment after `#`, for the user to share with the intended recipient.
+3. Do not open or fetch a newly created link to verify it: retrieval consumes the one-time secret. Retrieve a supplied link only when the user asks you to act as its recipient.
+4. Treat the full link as sensitive because it contains the decryption key. Avoid echoing plaintext secrets in responses or logs; the link can still remain in chat history after the secret is consumed.
 
-This is especially useful for:
-- Sharing API keys for agent configuration
-- Providing temporary access to services
-- Sharing secrets during troubleshooting sessions
+Creating a link does not authorize sending it to someone through email, chat, or another external tool. Follow the user's requested destination and your host's permissions.
 
 ## Troubleshooting
 
@@ -118,7 +117,7 @@ This is especially useful for:
 - The secret was already accessed. You'll need to create a new link.
 
 **"I need to share with multiple people"**
-- Create separate links for each recipient, or use the "peek" feature to check metadata without destroying the secret.
+- Create a separate link for each recipient. The "peek" feature can check metadata without consuming a link, but does not make it reusable.
 
 ## References
 
