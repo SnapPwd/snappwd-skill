@@ -11,7 +11,7 @@ Helps AI assistants and their users securely share secrets, API keys, credential
 - **Secure by Default**: Uses AES-256-GCM encryption, client-side
 - **Self-Destructing**: Links work exactly once, then the secret/file is deleted
 - **Zero-Knowledge**: Server never sees plaintext or encryption keys
-- **No Account Required**: No signup, no tracking
+- **No Account Required**: No signup needed to create or open a link
 - **File Support**: Share `.env` files, SSH keys, certificates, config files
 
 ## Installation
@@ -66,12 +66,14 @@ Treat the complete link as sensitive: it includes the decryption key. Opening it
 
 ### CLI Option
 
-If you have `snappwd-cli` installed:
+Agents with shell access can use the [SnapPwd CLI](https://github.com/SnapPwd/snappwd-cli) ([`@snappwd/cli`](https://www.npmjs.com/package/@snappwd/cli) on npm):
 
 ```bash
 npm install -g @snappwd/cli
 snappwd put "your-secret-here"
 ```
+
+See the [CLI documentation](https://www.snappwd.io/docs/cli) for every command and option.
 
 ## Files
 
@@ -95,5 +97,8 @@ MIT
 ## Links
 
 - [SnapPwd](https://snappwd.io) - Main application
-- [SnapPwd GitHub](https://github.com/SnapPwd/SnapPwd) - Source code
+- [SnapPwd Docs](https://www.snappwd.io/docs) - Guides and reference
+- [SnapPwd CLI](https://github.com/SnapPwd/snappwd-cli) - Command-line client used by this skill's CLI workflow
+- [SnapPwd Service](https://github.com/SnapPwd/snappwd-service) - Open-source backend API
+- [SnapPwd Web](https://github.com/SnapPwd/snappwd-web) - Self-hosted web app
 - [ClawHub](https://clawhub.ai) - Optional OpenClaw installation
