@@ -66,12 +66,14 @@ Treat the complete link as sensitive: it includes the decryption key. Opening it
 
 ### CLI Option
 
-If you have `snappwd-cli` installed:
+Agents with shell access can use the [SnapPwd CLI](https://github.com/SnapPwd/snappwd-cli) ([`@snappwd/cli`](https://www.npmjs.com/package/@snappwd/cli) on npm):
 
 ```bash
 npm install -g @snappwd/cli
 snappwd put "your-secret-here"
 ```
+
+See the [CLI documentation](https://www.snappwd.io/docs/cli) for every command and option.
 
 ## Files
 
@@ -95,5 +97,8 @@ MIT
 ## Links
 
 - [SnapPwd](https://snappwd.io) - Main application
-- [SnapPwd GitHub](https://github.com/SnapPwd/SnapPwd) - Source code
+- [SnapPwd Docs](https://www.snappwd.io/docs) - Guides and reference
+- [SnapPwd CLI](https://github.com/SnapPwd/snappwd-cli) - Command-line client used by this skill's CLI workflow
+- [SnapPwd Service](https://github.com/SnapPwd/snappwd-service) - Open-source backend API
+- [SnapPwd Web](https://github.com/SnapPwd/snappwd-web) - Self-hosted web app
 - [ClawHub](https://clawhub.ai) - Optional OpenClaw installation
