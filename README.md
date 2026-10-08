@@ -11,7 +11,7 @@ Helps AI assistants and their users securely share secrets, API keys, credential
 - **Secure by Default**: Uses AES-256-GCM encryption, client-side
 - **Self-Destructing**: Links work exactly once, then the secret/file is deleted
 - **Zero-Knowledge**: Server never sees plaintext or encryption keys
-- **No Account Required**: No signup, no tracking
+- **No Account Required**: No signup needed to create or open a link
 - **File Support**: Share `.env` files, SSH keys, certificates, config files
 
 ## Installation
