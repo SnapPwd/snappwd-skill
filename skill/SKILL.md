@@ -75,7 +75,7 @@ snappwd put-file ~/.ssh/id_rsa
 
 3. **Key in URL Fragment**: The encryption key is embedded in the URL after `#`, which means it's never sent to the server—it stays in the browser.
 
-4. **No Account Required**: No signup, no tracking, no logs of who created or viewed the secret.
+4. **No Account Required**: No signup needed to create or open a link.
 
 ## Common Use Cases
 
