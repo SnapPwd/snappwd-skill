@@ -48,8 +48,7 @@ https://snappwd.io/g/<uuid>#<key>
 
 ### 4. No Account Required
 
-- No user accounts, no tracking
-- No logs linking creators to secrets
+- No signup needed to create or open a link
 - No email verification or password requirements
 
 ## Encryption Details
